@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 import { getPractitioners } from "../services";
 import PractitionerCard from "./PractitionerCard";
+
+export const DIV = styled.div`
+  display: flex;
+  flex-direction: row;
+  lign-items: center;
+  justify-content: center;
+  flex-wrap: wrap;`
 
 export default function Practitioner() {
   const [practitioners, setPractitioners] = useState([]);
@@ -34,11 +42,11 @@ export default function Practitioner() {
   };
 
   return (
-    <div>
+    <React.Fragment>
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div>
+        <DIV>
           {practitioners.map((practitioner) => {
             return (
               <PractitionerCard
@@ -48,8 +56,8 @@ export default function Practitioner() {
               />
             );
           })}
-        </div>
+        </DIV>
       )}
-    </div>
+    </React.Fragment>
   );
 }
