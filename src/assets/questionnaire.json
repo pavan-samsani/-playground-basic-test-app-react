@@ -9,11 +9,6 @@
   "date": "2010",
   "item": [
     {
-      "linkId": "1",
-      "text": "Do you have allergies?",
-      "type": "boolean"
-    },
-    {
       "linkId": "2",
       "text": "General questions",
       "type": "group",
@@ -53,6 +48,11 @@
         {
           "linkId": "3.2",
           "text": "Do you drink alchohol?",
+          "type": "boolean"
+        },
+        {
+          "linkId": "3.3",
+          "text": "Do you have any allergies?",
           "type": "boolean"
         }
       ]
