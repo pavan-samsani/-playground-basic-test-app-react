@@ -3,16 +3,9 @@ import styled from "styled-components";
 import moment from "moment";
 import PropTypes from "prop-types";
 
-// const CardContainer = styled.div`
-//   margin: 10px 0;
-//   border: 1px solid rgba(0, 0, 0, 0.125);
-//   background: white;
-//   display: flex;
-//   width: 400px;
-//   padding: 15px;
-//   justify-content: space-between;
-// `;
 const CardContainer = styled.div`
+  background-color: #22303c;
+  color: #fff;
   width: 400px;
   border-radius: 0.75rem;
   box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
@@ -33,6 +26,17 @@ const CardContainer = styled.div`
       0 0 0 1px rgba(0, 0, 0, 0.3);
   }
 `;
+
+const ViewButton = styled.button`
+  margin: 10px;
+  background-color: rgb(29, 161, 242);
+  padding: 8px 16px;
+  border-radius: 21px;
+  border: 0;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 16px;
+  cursor: pointer;`
 
 const CardContent = styled.div`
   flex-grow: 1;
@@ -74,9 +78,9 @@ function PractitionerCard({ id, photo, name, gender, dob, onDelete }) {
         <div>Name: {getName()}</div>
         <div>Gender: {getGender()}</div>
         <div>Date of birth: {getDob()}</div>
-        <button classname="button" onClick={() => onDelete(id)}>
+        <ViewButton classname="button" onClick={() => onDelete(id)}>
           Delete
-        </button>
+        </ViewButton>
       </CardContent>
     </CardContainer>
   );

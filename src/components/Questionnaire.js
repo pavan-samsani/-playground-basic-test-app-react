@@ -8,6 +8,14 @@ import { isValidDate } from "../helper";
 const FormContainer = styled(Form)`
   display: flex;
   flex-direction: column;
+  margin: 12px;
+  padding: 12px;
+  broder: 1px solid #fff;
+  border: 1px solid #8899a6;
+  color: #fff;
+  border-radius: 28px;
+  padding-bottom: 20px;
+  background-color: #22303c;
   @media only screen and (min-width: 768px) {
     width: 500px;
   }
