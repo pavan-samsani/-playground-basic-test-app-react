@@ -38,6 +38,17 @@ const Error = styled.span`
   color: red;
 `;
 
+const ViewButton = styled.button`
+  margin: 10px;
+  background-color: rgb(29, 161, 242);
+  padding: 8px 16px;
+  border-radius: 21px;
+  border: 0;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 16px;
+  cursor: pointer;`
+
 const encodeLinkId = (linkId) => Buffer.from(linkId).toString("base64");
 
 const generateInitialValues = (items, values) => {
@@ -195,7 +206,7 @@ export default function Questionnaire() {
     >
       <FormContainer>
         {[...formList]}
-        <button type="submit">Submit</button>
+        <ViewButton type="submit">Submit</ViewButton>
         {response && (
           <pre>
             {/* <ul>
